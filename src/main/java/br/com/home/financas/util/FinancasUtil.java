@@ -12,7 +12,7 @@ import exception.FinancasException;
 
 public class FinancasUtil {
 	
-	public static final String MAIN_URL = "http://localhost:3306";
+	public static final String MAIN_URL = "http://localhost:9080";
 
 	public FinancasUtil() {}
 	
