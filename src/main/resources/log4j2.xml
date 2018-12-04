@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Configuration status="WARN" monitorInterval="30">
+	<Properties>
+		<Property name="LOG_PATTERN">
+			%-5p [Application : FINANCAS - BusinessModule : FINANCEIRO] %d{ddMMyyyy HH:mm:ss.SSS} [%t] %X{callId} %m%n
+		</Property>
+	</Properties>
+	<Appenders>
+		<Console name="ConsoleAppender" target="SYSTEM_OUT"
+			follow="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</Console>
+		<RollingFile name="fileAppenderFinancas" fileName="/logs/log-financas-${date:dd-MM-yyyy}.log" filePattern="/logs/log-financas-%d{dd-MM-yyyy}-%i.log">
+			<PatternLayout>
+				<Pattern>${LOG_PATTERN}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="ConsoleAppender" />
+			<AppenderRef ref="fileAppenderFinancas" />
+		</Root>
+	</Loggers>
+</Configuration>
