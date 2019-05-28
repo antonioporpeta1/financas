@@ -31,7 +31,7 @@ public class Receitas implements Serializable {
 	private int id;
 	
 	@Valid
-	@NotNull(message = "A data da receita È obrigatÛria")
+	@NotNull(message = "A data da receita √© obrigat√≥ria")
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	@Column(name = "RECE_DATA")
@@ -47,18 +47,18 @@ public class Receitas implements Serializable {
 	private int parcela;
 	
 	@Valid
-	@Size(max = 45, message = "A observaÁ„o n„o pode conter mais de 45 caracteres")
+	@Size(max = 45, message = "A observa√ß√£o n√£o pode conter mais de 45 caracteres")
 	@Column(name = "RECE_OBS")
 	private String obs;
 	
 	@Valid
-	@NotNull(message = "Informe a situaÁ„o")
-	@Size(max = 1, message = "A situaÁ„o n„o pode conter mais de 1 caracter")
+	@NotNull(message = "Informe a situa√ß√£o")
+	@Size(max = 1, message = "A situa√ß√£o n√£o pode conter mais de 1 caracter")
 	@Column(name = "RECE_SITUACAO")
 	private String situacao;
 	
 	@Valid
-	@NotNull(message = "O Tipo de Lancamento È obrigatÛrio")
+	@NotNull(message = "O Tipo de Lancamento √© obrigat√≥rio")
 	@ManyToOne
 	@JoinColumn(name = "TIPO_ID")
 	private TipoLancamento tipoLancamento;

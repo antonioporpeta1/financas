@@ -19,7 +19,7 @@ public class FinancasLogger {
 	@Value("${log.financas.all.method}")
 	private String isLogFinancasAllMethod;
 
-	@Around("execution(* br.com.kroton.financas.receiver.*.*(..)) || execution(* br.com.kroton.financas.receiver.model*.*(..))")
+	@Around("execution(* br.com.home.financas.service.*.*(..)) || execution(* br.com.home.financas.model*.*(..))")
 	public Object logMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
 		ThreadContext.put("callId", UUID.randomUUID().toString());
 		Object retorno = null;
@@ -33,7 +33,7 @@ public class FinancasLogger {
 				stopWatch.start();
 				retorno = joinPoint.proceed();
 				stopWatch.stop();
-				logFinancas.info(metodo, " Duração : " + stopWatch.getTotalTimeSeconds() + " seg. Fim ");
+				logFinancas.info(metodo, " DuraÃ§Ã£o : " + stopWatch.getTotalTimeSeconds() + " seg. Fim ");
 			} catch (Exception e) {
 				logFinancas.error(metodo, e.getMessage());
 				throw new FinancasThrowable(e);

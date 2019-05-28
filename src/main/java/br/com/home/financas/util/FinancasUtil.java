@@ -8,7 +8,7 @@ import java.util.Map;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ObjectError;
 
-import exception.FinancasException;
+import br.com.home.financas.exception.FinancasException;
 
 public class FinancasUtil {
 	

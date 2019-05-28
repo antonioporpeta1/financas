@@ -26,7 +26,7 @@ public class ResumoTipoLancamento implements Serializable {
 	private ResumoTipoLancamentoPK id;
 	
 	@Valid
-	@NotNull(message = "A data da receita é obrigatória")
+	@NotNull(message = "A data da receita Ã© obrigatÃ³ria")
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	@Column(name = "RECE_DATA")

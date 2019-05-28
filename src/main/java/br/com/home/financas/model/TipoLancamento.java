@@ -23,14 +23,14 @@ public class TipoLancamento implements Serializable {
 	private int id;
 	
 	@Valid
-	@NotNull(message = "Informe a descriÁ„o")
-	@Size(max = 45, message = "A descriÁ„o n„o pode conter mais de 45 caracteres")
+	@NotNull(message = "Informe a descri√ß√£o")
+	@Size(max = 45, message = "A descri√ß√£o n√£o pode conter mais de 45 caracteres")
 	@Column(name = "TIPO_DESCRICAO")
 	private String descricao;
 	
 	@Valid
-	@NotNull(message = "Informe se desmembra o Ìtem")
-	@Size(max = 1, message = "A opÁ„o desmembra Ìtem n„o pode conter mais de 1 caracter")
+	@NotNull(message = "Informe se desmembra o √≠tem")
+	@Size(max = 1, message = "A op√ß√£o desmembra √≠tem n√£o pode conter mais de 1 caracter")
 	@Column(name = "TIPO_DESMEMBRAITEM")
 	private String desmembraItem;
 

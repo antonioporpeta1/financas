@@ -30,12 +30,12 @@ public class AdicionalTotal implements Serializable {
 	private BigDecimal valor;
 	
 	@Valid
-	@Size(max = 45, message = "A observaÁ„o n„o pode conter mais de 45 caracteres")
+	@Size(max = 45, message = "A observa√ß√£o n√£o pode conter mais de 45 caracteres")
 	@Column(name = "ADIC_OBS")
 	private String obs;
 	
 	@Valid
-	@NotNull(message = "O Tipo de Lancamento È obrigatÛrio")
+	@NotNull(message = "O Tipo de Lancamento √© obrigat√≥rio")
 	@ManyToOne
 	@JoinColumn(name = "TIPO_ID")
 	private TipoLancamento tipoLancamento;
